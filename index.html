@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Adunika Hair Salon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.logo {
+    color: gold;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+.call { background: green; }
+.whatsapp { background: #25D366; }
+.book { background: orange; }
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 500px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 260px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+iframe {
+    width: 90%;
+    height: 300px;
+    border-radius: 15px;
+}
+
+footer {
+    background: black;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">✂️ Adunika Salon</div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div>
+        <h1>Adunika Hair Salon</h1>
+        <p>Premium Grooming Experience</p>
+
+        <a href="tel:8058657901" class="btn call">📞 Call</a>
+        <a href="https://wa.me/918058657901" class="btn whatsapp">💬 WhatsApp</a>
+        <a href="#booking" class="btn book">📅 Book Now</a>
+    </div>
+</div>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <p>Haircut | Beard | Facial | Hair Styling</p>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f">
+        <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250">
+    </div>
+</section>
+
+<!-- PRICE LIST -->
+<section>
+    <h2>Our Price List</h2>
+    <div class="card">
+        <p>💇 Hair Cut - ₹70</p>
+        <p>🧔 Beard Trim - ₹40</p>
+        <p>💇 Hair + Beard - ₹100</p>
+        <p>🎨 Hair Color - ₹250</p>
+        <p>🧖 Facial - ₹300</p>
+        <p>💆 Head Massage - ₹150</p>
+    </div>
+</section>
+
+<section>
+    <div class="card">
+        <h2>Owner</h2>
+        <p>Ramavtar Sain</p>
+        <p>Ramesh Chand Sain</p>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="card">
+        <h2>Contact</h2>
+        <p>📞 8058657901 / 9001018410</p>
+        <p>📧 Rameshsain0444@gmail.com</p>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+    <h2>Customer Reviews</h2>
+
+    <div class="card">
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>"Best salon in Alwar 👍"</p>
+        <small>- Rahul</small>
+    </div>
+
+    <div class="card">
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>"Perfect haircut 🔥"</p>
+        <small>- Mohit</small>
+    </div>
+
+    <div class="card">
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>"Affordable & professional 💯"</p>
+        <small>- Deepak</small>
+    </div>
+</section>
+
+<section id="booking">
+    <div class="card">
+        <h2>Book Appointment</h2>
+
+        <input type="text" id="name" placeholder="Name"><br>
+        <input type="date" id="date"><br>
+        <input type="time" id="time"><br>
+        <textarea id="service" placeholder="Service"></textarea><br>
+
+        <button onclick="book()">Book via WhatsApp</button>
+    </div>
+</section>
+
+<section>
+    <h2>Location</h2>
+    <iframe src="https://maps.google.com/maps?q=Saini%20Dharmshala%20Alwar&z=15&output=embed"></iframe>
+</section>
+
+<footer>
+    <p>© 2026 Adunika Hair Salon</p>
+</footer>
+
+<script>
+function book(){
+let name=document.getElementById("name").value;
+let date=document.getElementById("date").value;
+let time=document.getElementById("time").value;
+let service=document.getElementById("service").value;
+
+let msg="Booking:%0AName:"+name+"%0ADate:"+date+"%0ATime:"+time+"%0AService:"+service;
+
+window.open("https://wa.me/918058657901?text="+msg);
+}
+</script>
+
+</body>
+</html>
